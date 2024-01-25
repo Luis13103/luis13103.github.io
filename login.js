@@ -7,13 +7,13 @@ function validarFormulario() {
 
     // Validar correo
     if (!validarCorreo(email)) {
-        alert('El correo debe contener el símbolo "@"');
+        mostrarAlerta('El correo debe contener el símbolo "@"');
         return;
     }
 
     // Validar contraseña
     if (!validarContraseña(password)) {
-        alert('La contraseña debe tener al menos 8 caracteres');
+        mostrarAlerta('La contraseña debe tener al menos 8 caracteres');
         return;
     }
 
@@ -27,4 +27,8 @@ function validarCorreo(email) {
 
 function validarContraseña(password) {
     return password.length >= 8;
+}
+
+function mostrarAlerta(mensaje) {
+    alert(mensaje);
 }
